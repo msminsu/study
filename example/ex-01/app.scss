@@ -1,0 +1,91 @@
+@mixin border-box{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin addStr($string:""){
+	display: block;
+	content: $string;
+}
+
+@mixin ir(){
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+.wall{
+	margin: 10px;
+	padding: 10px;
+	border:1px solid #ccc;
+}
+
+
+.spin-box{
+	$width: 200px;
+	$button-width: 30px;
+	$button-height: 30px;
+
+	@include border-box;
+	position: relative;
+	width: $width;
+	padding: 0 $button-width;
+	line-height: 1;
+
+	input{
+		@include border-box;
+		width: 100%;
+		border:0;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		height: $button-height;
+		line-height: $button-height; 
+		text-align: center;
+
+	}
+
+	button{
+		position: absolute;
+		width: $button-width;
+		height:$button-height;
+		line-height: $button-height;
+		text-align: center;
+		border:none;
+		top: 0;
+		background: #032141;
+		color:#fff;
+		cursor: pointer;
+
+		&:active{
+			background: #03558d;
+			color:#fff;
+		}
+		&:after{
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-indent: 0;
+			width:$button-width;
+			height: $button-height;
+			line-height: $button-height;
+			text-align: center;
+		}
+
+		&.btn-plus{
+			@include ir;
+			&:after{
+				@include addStr('+');
+			}
+			right:0;
+		}
+
+		&.btn-minus{
+			@include ir;
+			&:after{
+				@include addStr('-');
+			}
+			left: 0;
+		}
+	}
+}
