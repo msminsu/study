@@ -1,88 +1,85 @@
-@mixin border-box{
+@mixin border-box {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
-@mixin addStr($string:""){
+@mixin addStr($string:'') {
 	display: block;
 	content: $string;
 }
-
-@mixin ir(){
+@mixin ir() {
 	display: block;
 	overflow: hidden;
 	text-indent: -9999px;
 }
-
-.wall{
+*{
+	margin:0;
+	padding:0;
+}
+.wall {
 	margin: 10px;
 	padding: 10px;
-	border:1px solid #ccc;
+	border: 1px solid #ccc;
 }
-
-
-.spin-box{
+.spin-box {
 	$width: 200px;
 	$button-width: 30px;
 	$button-height: 30px;
-
+	
 	@include border-box;
 	position: relative;
 	width: $width;
 	padding: 0 $button-width;
 	line-height: 1;
 
-	input{
+	input {
 		@include border-box;
 		width: 100%;
-		border:0;
+		border: 0;
 		border-top: 1px solid #ccc;
 		border-bottom: 1px solid #ccc;
 		height: $button-height;
-		line-height: $button-height; 
-		text-align: center;
-
-	}
-
-	button{
-		position: absolute;
-		width: $button-width;
-		height:$button-height;
 		line-height: $button-height;
 		text-align: center;
-		border:none;
+	}
+	button {
+		position: absolute;
+		width: $button-width;
+		height: $button-height;
+		line-height: $button-height;
+		text-align: center;
+		border: none;
 		top: 0;
 		background: #032141;
-		color:#fff;
+		color: #fff;
 		cursor: pointer;
 
-		&:active{
+		&:active {
 			background: #03558d;
-			color:#fff;
+			color: #fff;
 		}
-		&:after{
+		&:after {
 			position: absolute;
 			top: 0;
 			left: 0;
 			text-indent: 0;
-			width:$button-width;
+			width: $button-width;
 			height: $button-height;
 			line-height: $button-height;
 			text-align: center;
 		}
-
-		&.btn-plus{
+		&.btn-plus {
 			@include ir;
-			&:after{
+
+			&:after {
 				@include addStr('+');
 			}
-			right:0;
+			right: 0;
 		}
-
-		&.btn-minus{
+		&.btn-minus {
 			@include ir;
-			&:after{
+
+			&:after {
 				@include addStr('-');
 			}
 			left: 0;
