@@ -3,18 +3,57 @@
 <head>
 	<title></title>
 	<script type="text/javascript">
-	var foo = {
-		name: 'foo',
-		age: 1,
-		major: 'test study'
-	}
+	// var _goo = {
+	// 	name: 'foo',
+	// 	age: 1,
+	// 	major: 'test study'
+	// }
 
-	for( var b in foo){
-		console.log(b,foo[b])
+	// for( var b in _goo){
+	// 	console.log(b,_goo[b])
+	// }
+
+/*	var x = 10;
+	function foo(){
+		console.log(this.x);
 	}
+	foo();
+	var obj = {x : 12};
+	foo.apply(obj);
+
+	var obj2 = {x : 18};
+	foo.call(obj2);
+*/
+
+
+var name = 'bill';
+
+function foo( msg, msg2){
+	console.log(msg + ' ' + msg2);
+	console.log(this.name);
+}
+
+foo('normal call', 'default');
+
+var obj= {name: 'steve'}
+
+foo.call(obj,'call function', 'object');
+foo.apply(obj, ['apply function','object']);
+
+
+
+
+
+
+
+
+
+
+
+
 	</script>
 </head>
 <body>
-
+하루하나
 </body>
 </html>
