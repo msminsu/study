@@ -28,6 +28,7 @@
 		btnPlus.on('click',function(){
 			input.val(+input.val() + 1);
 		}
+		
 		});
 
 		btnMinus.on('click',function(){
@@ -35,3 +36,5 @@
 		});
 	});
 }(window.jQuery));
+
+//
