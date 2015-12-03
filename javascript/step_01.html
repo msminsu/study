@@ -26,7 +26,7 @@
 */
 
 
-var name = 'bill';
+/*var name = 'bill';
 
 function foo( msg, msg2){
 	console.log(msg + ' ' + msg2);
@@ -39,19 +39,110 @@ var obj= {name: 'steve'}
 
 foo.call(obj,'call function', 'object');
 foo.apply(obj, ['apply function','object']);
+*/
 
 
+/*function Person(name){
+	this.name = name;
+}
+
+Person.prototype.sayName = function() {
+	console.log(this.name);
+};
+var person1 = new Person("Nicholas");
+var person2 = new Person("Greg");
+
+console.log( person1.name);
+console.log(person2.name);
+
+person1.sayName();
+person2.sayName();
 
 
+*/
+
+/*
+function Person(name){
+	this.name = name;
+}
+
+Person.prototype.sayName = function(){
+	console.log(this.name);
+}
+
+Person.prototype.favorites = [];
+
+var person1 = new Person("철수");
+var person2 = new Person("영희");
+
+person1.favorites.push("피자");
+person2.favorites.push("치킨");
+console.log(person1.favorites);
+console.log(person2.favorites);*/
 
 
+/*function Person(name){
+	this.name  = name;
+}
+
+Person.prototype = {
+	constructor : Person,
+	sayName : function(){
+		console.log(this);
+		console.log(this.name);
+	},
+	toString: function(){
+		return "[ Person " + this.name + " ]";
+	}
+};
+
+var person1 = new Person("철수");
+var person2 = new Person("영희");
+
+console.log(person1 instanceof Person);
+console.log(person1.constructor === Person);
+console.log(person1.constructor === Object);
+console.log(person1.sayName())
+*/
 
 
+/*function Person(name){
+	this.name = name;
+}
 
+Person.prototype = {
+	constructor: Person,
+	sayName : function(){
+		console.log(this.name);
+	},
+	toString: function(){
+		return "[Person "+ this.name + "]";
+	}
+};
 
+var person1 = new Person("강동현");
+var person2 = new Person("김용철");
+console.log("sayHi" in person1);
+console.log("sayHi" in person2);
 
+Person.prototype.sayHi = function(){
+	console.log("Hi");
+}
 
-	</script>
+person1.sayHi();
+person2.sayHi();*/
+
+Array.prototype.sum = function(){
+	return this.reduce(function(previous, current){
+		return previous + current;
+	});
+};
+
+var numbers  = [1,2,3,4,5,6];
+var result = numbers.reduce();
+console.log( result );
+
+</script>
 </head>
 <body>
 하루하나
