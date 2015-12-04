@@ -1,0 +1,65 @@
+.wall {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc; }
+
+.spin-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  width: 200px;
+  padding: 0 30px;
+  line-height: 1; }
+  .spin-box input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 30px;
+    line-height: 30px;
+    text-align: center; }
+  .spin-box button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    top: 0;
+    background: #032141;
+    color: #fff;
+    cursor: pointer; }
+    .spin-box button:active {
+      background: #03558d;
+      color: #fff; }
+    .spin-box button:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-indent: 0;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center; }
+    .spin-box button.btn-plus {
+      display: block;
+      overflow: hidden;
+      text-indent: -9999px;
+      right: 0; }
+      .spin-box button.btn-plus:after {
+        display: block;
+        content: "+"; }
+    .spin-box button.btn-minus {
+      display: block;
+      overflow: hidden;
+      text-indent: -9999px;
+      left: 0; }
+      .spin-box button.btn-minus:after {
+        display: block;
+        content: "-"; }
+
+/*# sourceMappingURL=app.css.map */
