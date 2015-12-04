@@ -1,0 +1,78 @@
+diff a/javascript/step_01.html b/javascript/step_01.html	(rejected hunks)
+@@ -3,18 +3,57 @@
+ <head>
+ 	<title></title>
+ 	<script type="text/javascript">
+-	var foo = {
+-		name: 'foo',
+-		age: 1,
+-		major: 'test study'
+-	}
++	// var _goo = {
++	// 	name: 'foo',
++	// 	age: 1,
++	// 	major: 'test study'
++	// }
++
++	// for( var b in _goo){
++	// 	console.log(b,_goo[b])
++	// }
+@@ -41,7 +41,10 @@
+ foo.apply(obj, ['apply function','object']);
+ 
+-	for( var b in foo){
+-		console.log(b,foo[b])
++/*	var x = 10;
++	function foo(){
++		console.log(this.x);
+ 	}
++	foo();
++	var obj = {x : 12};
++	foo.apply(obj);
++
++	var obj2 = {x : 18};
++	foo.call(obj2);
++*/
++
++
++var name = 'bill';
++
++function foo( msg, msg2){
++	console.log(msg + ' ' + msg2);
++	console.log(this.name);
++}
++
++foo('normal call', 'default');
++
++var obj= {name: 'steve'}
++
++foo.call(obj,'call function', 'object');
++foo.apply(obj, ['apply function','object']);
++
++
++
++
++
++
++
++
++
++
++
++
+ 	</script>
+ </head>
+ <body>
+-
++하루하나
+ </body>
+ </html>
+\ No newline at end of file
+ // 평소에는 쓸이유가 거의 없지만 객체를 상속받았을대 부모클래스의 함수를 호출하고 싶을대 응용할 수 있습니다. 
++<<<<<<< HEAD
+ 
++=======
++>>>>>>> 122a6fe6462911d3576e61bbde269d62bea4dfa0
+ 
+ //주석
+ //주석2

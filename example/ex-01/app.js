@@ -27,8 +27,11 @@
 
 		btnPlus.on('click',function(){
 			input.val(+input.val() + 1);
+<<<<<<< HEAD
 		}
 		
+=======
+>>>>>>> b08291aec45c1c63936caa5d5b35570987f14df8
 		});
 
 		btnMinus.on('click',function(){

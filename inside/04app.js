@@ -77,7 +77,7 @@
 /**
  * 함수도 객체다
  */
-function add(x, y) {
+/*function add(x, y) {
 	return x + y;
 }
 
@@ -87,37 +87,37 @@ add.status = 'OK';
 console.log(add.result);
 console.log(add['result']);
 console.log(add.status);
-console.log(add['status']);
+console.log(add['status']);*/
 
 /**
  * 변수나 프로퍼티의 값으로 할당
  */
-////foo 변수에 숫자 100을 할당
-//var foo = 100;
-//
-////호출시 변수에 리턴값을 할당
-//var bar = function () {
-//	return 100;
-//};
-//console.log(bar());
-//
-////obj.baz 메소드 호출시 리턴값을 할당
-//var obj = {};
-//obj.baz = function () {
-//	return 200;
-//};
-//console.log(obj.baz());
+/*//foo 변수에 숫자 100을 할당
+var foo = 100;
+
+//호출시 변수에 리턴값을 할당
+var bar = function () {
+	return 100;
+};
+console.log(bar());
+
+//obj.baz 메소드 호출시 리턴값을 할당
+var obj = {};
+obj.baz = function () {
+	return 200;
+};
+console.log(obj.baz());*/
 
 /**
  * 함수를 다른 함수의 인자로 넘김
  */
-//var foo = function (func) {
-//	func();
-//};
-//
-//foo(function () {
-//	console.log('함수는 argument로 사용 가능');
-//});
+/*var foo = function (func) {
+	func();
+};
+
+foo(function () {
+	console.log('함수는 argument로 사용 가능');
+});*/
 
 /**
  * 리턴값으로 활용
@@ -139,57 +139,57 @@ console.log(add['status']);
 /**
  * 함수 객체의 기본 프로퍼티
  */
-//function add(x, y) {
-//
-//	console.log(add.caller);
-//
-//	return x + y;
-//}
-//
-//add(2, 3);
-//
-//console.dir(add);
+/*function add(x, y) {
+
+	console.log(add.caller);
+
+	return x + y;
+}
+
+add(2, 3);
+
+console.dir(add);*/
 
 /**
  * length
  */
-//function func0() {
-//}
-//
-//function func1(x) {
-//	return x;
-//}
-//
-//function func2(x, y) {
-//	return x + y;
-//}
-//
-//function func3(x, y, z) {
-//	return x + y + z;
-//}
-//
-//console.log('func0.length', func0.length);
-//console.log('func1.length', func1.length);
-//console.log('func2.length', func2.length);
-//console.log('func3.length', func3.length);
+/*function func0() {
+}
+
+function func1(x) {
+	return x;
+}
+
+function func2(x, y) {
+	return x + y;
+}
+
+function func3(x, y, z) {
+	return x + y + z;
+}
+
+console.log('func0.length', func0.length);
+console.log('func1.length', func1.length);
+console.log('func2.length', func2.length);
+console.log('func3.length', func3.length);*/
 
 /**
  * prototype 과 constructor
  * 모든객체는 프로토타입 객체을 소유하고 있음, 함수도 객체이기 때문에 프로토타입 객체를 가지고 있음
  */
-//function myFunction() {
-//	return true;
-//}
-//
-//console.dir(myFunction.prototype);
-//console.dir(myFunction.prototype.constructor);
+/*function myFunction() {
+	return true;
+}
+
+console.dir(myFunction.prototype);
+console.dir(myFunction.prototype.constructor);*/
 
 /**
  * 이벤트 핸들러
  */
-//window.onload = function () {
-//	alert('This is the callback function');
-//};
+/*window.onload = function () {
+	alert('This is the callback function');
+};*/
 
 /**
  * 즉시 실행함수
@@ -197,12 +197,12 @@ console.log(add['status']);
  * 즉시 실행함수의 이점 - 최초 한번만 실행되는 초기화 코드시 사용, 함수유효범위를 통한 변수 충돌방지
  *
  */
-//(function (name) {
-//	console.log('This is the immediate function ' + name);
-//}('foo'));
+/*(function (name) {
+	console.log('This is the immediate function ' + name);
+}('foo'));*/
 
 /**
- * 내부함수
+ * 내부함수  생명주기 , 스코프, 
  */
 //function parent() {
 //	var a = 100;
@@ -221,34 +221,34 @@ console.log(add['status']);
 //child();
 
 /**
- * 외부에서 내부를 호출, 클로저
+ * 외부에서 내부를 호출, 클로저    가비지 컬렉터 - 
  */
-//function parent() {
-//	var a = 100;
-//	var child = function () {
-//		console.log(a);
-//	};
-//
-//	return child;
-//}
-//
-//var inner = parent();
-//inner();
+/*function parent() {
+	var a = 100;
+	var child = function () {
+		console.log(a);
+	};
+
+	return child;
+}
+
+var inner = parent();
+inner();*/
 
 /**
  * 렉시컬
  * 함수 실행 시 유효범위를 함수 실행 환경이 아닌 함수 정의 환경으로 참조하는 특성
  */
-//function f1() {
-//	var a = 10;
-//	f2();
-//}
-//
-//function f2() {
-//	return a;
-//}
-//
-//f1();
+/*function f1() {
+	var a = 10;
+	f2();
+}
+
+function f2() {
+	return a;
+}
+
+f1();*/
 
 /**
  * 실행문맥
